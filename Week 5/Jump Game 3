@@ -1,0 +1,31 @@
+class Solution:
+    def canReach(self, arr: List[int], start: int) -> bool:
+        
+        if arr[start]==0:
+            return True
+        
+        
+        visited=set()
+        queue=deque()
+        queue.append(start)
+        directions=[-1,1]
+        
+        while queue:
+            
+            popped=queue.popleft()
+           
+            if arr[popped]==0:
+                return True
+            
+            visited.add(popped)
+                
+            for i in directions:
+                
+                path= popped + arr[popped]*i
+                
+                if 0<=path<len(arr) and path not in visited:
+                    queue.append(path)
+                    
+                    
+        return False
+        
