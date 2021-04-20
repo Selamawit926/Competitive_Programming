@@ -49,4 +49,3 @@ for i in range(num):
    
 
 print(count)
-    

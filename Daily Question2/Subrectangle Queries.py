@@ -26,5 +26,3 @@ class SubrectangleQueries:
             self.dfs(i+1,j,rowend,colend,rectangle,new,visited)
             
         return
-            
-        
