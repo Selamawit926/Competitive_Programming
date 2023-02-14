@@ -1,0 +1,11 @@
+class Solution:
+    def minimumDeletions(self, s: str) -> int:
+        a=count=0
+        for i in range(len(s)-1,-1,-1):
+            if s[i]=="a":
+                a+=1
+            else:
+                if a>0:
+                    a-=1
+                    count+=1
+        return count
